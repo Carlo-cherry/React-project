@@ -9,7 +9,6 @@ const recentTransactions = [
     category: 'Food',
     date: '2025-01-01',
     type: 'expense',
-    paymentMode: 'Credit Card',
   },
   {
     id: '2',
@@ -18,7 +17,6 @@ const recentTransactions = [
     category: 'Entertainment',
     date: '2024-12-31',
     type: 'expense',
-    paymentMode: 'UPI',
   },
   {
     id: '3',
