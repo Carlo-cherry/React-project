@@ -19,6 +19,7 @@ interface Group {
   date: string;
   members: GroupMember[];
   splitType: 'equal' | 'custom';
+  paymentMode?: string;
 }
 
 interface GroupItemProps {
@@ -118,6 +119,11 @@ export function GroupItem({ group, onEdit, onDelete, onSettleMember, onDeleteMem
             <Calendar size={16} color="#9CA3AF" />
             <Text style={styles.date}>{group.date}</Text>
           </View>
+          {group.paymentMode && (
+            <View style={styles.paymentModeContainer}>
+              <Text style={styles.paymentMode}>Payment: {group.paymentMode}</Text>
+            </View>
+          )}
         </View>
 
         <View style={styles.amountContainer}>
@@ -238,6 +244,13 @@ const styles = StyleSheet.create({
   date: {
     fontSize: 12,
     color: '#9CA3AF',
+  },
+  paymentModeContainer: {
+    marginLeft: 16,
+  },
+  paymentMode: {
+    fontSize: 12,
+    color: '#F59E0B',
   },
   amountContainer: {
     flexDirection: 'row',

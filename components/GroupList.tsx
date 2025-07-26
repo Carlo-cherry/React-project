@@ -20,6 +20,7 @@ interface Group {
   date: string;
   members: GroupMember[];
   splitType: 'equal' | 'custom';
+  paymentMode?: string;
 }
 
 const initialGroups: Group[] = [
@@ -29,6 +30,7 @@ const initialGroups: Group[] = [
     myShare: '₹600', 
     description: 'Team lunch', 
     date: '2025-01-01',
+    paymentMode: 'UPI',
     members: [
       { id: '1', name: 'John', amount: 600, settled: false },
       { id: '2', name: 'Sarah', amount: 600, settled: true },
@@ -43,6 +45,7 @@ const initialGroups: Group[] = [
     myShare: '₹450', 
     description: 'Movie night', 
     date: '2024-12-30',
+    paymentMode: 'Credit Card',
     members: [
       { id: '5', name: 'Emma', amount: 450, settled: true },
       { id: '6', name: 'David', amount: 450, settled: false },
@@ -57,6 +60,7 @@ const initialGroups: Group[] = [
     myShare: '₹3,000', 
     description: 'Weekend trip expenses', 
     date: '2024-12-28',
+    paymentMode: 'Cash',
     members: [
       { id: '9', name: 'Alex', amount: 3000, settled: false },
       { id: '10', name: 'Sophie', amount: 3000, settled: false },
